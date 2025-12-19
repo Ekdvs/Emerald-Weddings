@@ -1,0 +1,544 @@
+
+<html>
+    <meta charset="UTF-8">
+    <meta name="description" content="Plan your dream wedding in Sri Lanka with The Ceylon Wedding Planner. Explore beautiful venues, expert services, and affordable packages tailored for you." />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="image2.jpg" type="image/x-icon">
+<head>
+    <title>The Ceylon Wedding Planner | Elegant Wedding Planning in Sri Lanka</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #fff0f5;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav a {
+            color: #c71585;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #c71585;
+            color: white;
+        }
+
+        .hero {
+            background:url('image1.jpg') center/cover no-repeat;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #c71585;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #b01378;
+        }
+
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #c71585;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #c71585;
+            margin: 15px auto 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .services-preview {
+            padding: 80px 0;
+            background-color: #fff0f5;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 25px;
+        }
+
+        .service-card h3 {
+            color: #c71585;
+            margin-bottom: 15px;
+        }
+
+
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #c71585, #b01378);
+            color: white;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 1s;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        .testimonial-content {
+            background-color: rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .testimonial-content:before {
+            content: '"';
+            font-size: 80px;
+            color: rgba(255,255,255,0.2);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #ffd700;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+        }
+
+        .testimonial-dot.active {
+            background-color: #ffd700;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        footer {
+            background-color: #b01378;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .footer-column h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .social-links a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="image2.jpg" alt="Emerald Weddings">
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" >Gallery</a>
+                <a href="packages.php">Packages</a>
+                <a href="contact.php">Contact</a>
+                <a href="about.html">About Us</a>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Crafting Unforgettable Weddings</h1>
+            <p>Where luxury meets romance. Let us transform your dream wedding into reality with our expert planning.</p>
+            <a href="packages.php" class="btn">Begin Your Journey</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Emerald Weddings</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2010, Emerald Weddings has become the premier wedding planning service, specializing in creating bespoke celebrations that reflect each couple's unique love story.</p>
+                    <p>Our team of passionate professionals brings together decades of experience in event design, vendor coordination, and cultural traditions to deliver weddings that exceed expectations.</p>
+                    <p>From intimate ceremonies to grand receptions, we handle every detail with precision and care, ensuring your special day is as magical as you've always imagined.</p>
+                </div>
+                <div class="about-image">
+                    <img src="image3.jpg" alt="Wedding Planning Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Our Signature Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="image4.jpg" alt="Venue Selection">
+                    <div class="service-card-content">
+                        <h3>Venue Selection</h3>
+                        <p>Discover breathtaking wedding venues from beachfront resorts to elegant ballrooms.</p>
+                        <a href="services.html#venue" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="image5.jpg" alt="Catering Services">
+                    <div class="service-card-content">
+                        <h3>Catering Services</h3>
+                        <p>Exquisite culinary experiences blending flavors from around the world.</p>
+                        <a href="services.html#catering" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="image6.jpg" alt="Wedding Decor">
+                    <div class="service-card-content">
+                        <h3>Wedding Decor</h3>
+                        <p>Transform any space into a romantic setting with stunning floral arrangements.</p>
+                        <a href="services.html#decor" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Couples Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Emerald Weddings transformed our vision into reality with flawless execution. Our wedding was more beautiful than we could have imagined!</p>
+                        <p class="testimonial-author">- Priya & Raj</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">The team exceeded our expectations. They understood exactly what we wanted and made our wedding absolutely magical.</p>
+                        <p class="testimonial-author">- Sarah & James</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">The level of professionalism and creativity was outstanding. They handled everything with such care - we couldn't have asked for more.</p>
+                        <p class="testimonial-author">- Anjali & Arjun</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" onclick="currentTestimonial(0)"></div>
+                    <div class="testimonial-dot" onclick="currentTestimonial(1)"></div>
+                    <div class="testimonial-dot" onclick="currentTestimonial(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Emerald Weddings</h3>
+                    <p>Premium wedding planning services creating unforgettable celebrations since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="packages.php">Packages</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Wedding Lane, Colombo 05</p>
+                    <p><i class="fas fa-phone"></i> +94 76 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@emeraldweddings.lk</p>
+                </div>
+            </div>
+            
+            
+            <div class="footer-bottom">
+                <p>This website does not collect sensitive personal information or install software. For questions, contact us at: ekdvsampath@email.com</p>
+                
+
+                <p>&copy; 2025 Emerald Weddings. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Testimonial Slider
+        let testimonialIndex = 0;
+        showTestimonials();
+        
+        function currentTestimonial(n) {
+            testimonialIndex = n;
+            showTestimonials();
+        }
+        
+        function showTestimonials() {
+            let slides = document.getElementsByClassName("testimonial-slide");
+            let dots = document.getElementsByClassName("testimonial-dot");
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                dots[i].classList.remove("active");
+            }
+            
+            slides[testimonialIndex].classList.add("active");
+            dots[testimonialIndex].classList.add("active");
+        }
+        
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(function() {
+            testimonialIndex++;
+            if (testimonialIndex >= document.getElementsByClassName("testimonial-slide").length) {
+                testimonialIndex = 0;
+            }
+            showTestimonials();
+        }, 5000);
+    </script>
+</body>
+</html>

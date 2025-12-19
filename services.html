@@ -1,0 +1,1347 @@
+
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
+<head>
+    <title>Our Services | Emerald Weddings | Premium Wedding Planners</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #fff0f5;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav a {
+            color: #c71585;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #c71585;
+            color: white;
+        }
+
+        .services-hero {
+            background: url('image7.jpg') center/cover no-repeat;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .services-hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .services-main {
+            padding: 80px 0;
+            background-color: #fff0f5;
+        }
+
+        .service-section {
+            margin-bottom: 80px;
+            background-color: white;
+            padding: 40px;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service-header h2 {
+            color: #c71585;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .service-header h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #c71585;
+            margin: 15px auto 0;
+        }
+
+        .service-header p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .service-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .service-text {
+            flex: 1;
+        }
+
+        .service-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-column h3 {
+            color: #c71585;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li:before {
+            content: '•';
+            color: #c71585;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .service-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .expanded-content {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #fff9fb;
+            border-radius: 8px;
+            border-left: 4px solid #c71585;
+        }
+
+        .expanded-content h3 {
+            color: #c71585;
+            margin-bottom: 15px;
+        }
+
+        .expanded-content p {
+            margin-bottom: 15px;
+        }
+
+        .expanded-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .expanded-feature {
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .expanded-feature h4 {
+            color: #b01378;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #b01378;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .footer-column h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .social-links a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            .services-hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .service-content {
+                flex-direction: column;
+            }
+            
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="image2.jpg" alt="Emerald Weddings">
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html"class="active">Services</a>
+                <a href="gallery.html" >Gallery</a>
+                <a href="packages.php">Packages</a>
+                <a href="contact.php">Contact</a>
+                <a href="about.php">About Us</a>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="services-hero-content">
+            <h1>Our Complete Wedding Services</h1>
+            <p>Every detail crafted to perfection for your special day</p>
+        </div>
+    </section>
+
+    <main class="services-main">
+        <div class="container">
+            <section id="venue" class="service-section">
+                <div class="service-header">
+                    <h2>Venue & Location Services</h2>
+                    <p>From breathtaking beaches to elegant ballrooms, we'll find and prepare the perfect setting for your celebration.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Venue Selection</h3>
+                                <ul class="feature-list">
+                                    <li>Indoor/outdoor venue options</li>
+                                    <li>Destination wedding arrangements</li>
+                                    <li>Hall, garden, beach, rooftop options</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Setup & Logistics</h3>
+                                <ul class="feature-list">
+                                    <li>Venue decoration and setup</li>
+                                    <li>Site visits and negotiations</li>
+                                    <li>Seating and stage setup</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image8.jpg" alt="Luxury wedding venue">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Venue Services</h3>
+                    <p>Our venue specialists will handle every aspect of your wedding location, from initial selection to final setup. We maintain relationships with the finest venues across the country to ensure you get the best options at the best prices.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Venue Selection Process</h4>
+                            <ul class="feature-list">
+                                <li>Consultation to understand your vision</li>
+                                <li>Curated selection of 5-7 perfect venues</li>
+                                <li>Accompanied site visits</li>
+                                <li>Contract review and negotiation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Setup Services</h4>
+                            <ul class="feature-list">
+                                <li>3D venue layout planning</li>
+                                <li>Lighting design and installation</li>
+                                <li>Furniture and linen selection</li>
+                                <li>Parking and transportation coordination</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Destination Weddings</h4>
+                            <ul class="feature-list">
+                                <li>International venue sourcing</li>
+                                <li>Travel coordination for guests</li>
+                                <li>Local vendor partnerships</li>
+                                <li>Cultural and legal guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+     
+            <section id="catering" class="service-section">
+                <div class="service-header">
+                    <h2>Catering & Menu Planning</h2>
+                    <p>Exquisite culinary experiences tailored to your tastes and cultural preferences.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Dining Options</h3>
+                                <ul class="feature-list">
+                                    <li>Full meal catering (buffet/plated)</li>
+                                    <li>Veg / non-veg / vegan options</li>
+                                    <li>Cultural or traditional menus</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Specialty Services</h3>
+                                <ul class="feature-list">
+                                    <li>Sweet tables & dessert bars</li>
+                                    <li>Beverage & mocktail bars</li>
+                                    <li>Wedding cake design and baking</li>
+                                    <li>Live food stations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image9.jpg" alt="Wedding catering">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Catering Services</h3>
+                    <p>Our culinary team will design a menu that reflects your personal tastes and cultural traditions, working with top chefs and caterers to create a memorable dining experience for you and your guests.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Menu Development</h4>
+                            <ul class="feature-list">
+                                <li>Tasting sessions with 3 caterers</li>
+                                <li>Custom menu creation</li>
+                                <li>Dietary restriction accommodations</li>
+                                <li>Cultural cuisine specialists</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Beverage Services</h4>
+                            <ul class="feature-list">
+                                <li>Signature cocktail creation</li>
+                                <li>Wine pairing consultation</li>
+                                <li>Premium bar packages</li>
+                                <li>Non-alcoholic specialty drinks</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Specialty Items</h4>
+                            <ul class="feature-list">
+                                <li>Custom wedding cake design</li>
+                                <li>Late-night snack stations</li>
+                                <li>Interactive food experiences</li>
+                                <li>Takeaway gifts for guests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="decor" class="service-section">
+                <div class="service-header">
+                    <h2>Decor & Theming</h2>
+                    <p>Transform any space into a magical setting that reflects your unique style.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Ceremony Decor</h3>
+                                <ul class="feature-list">
+                                    <li>Stage decoration</li>
+                                    <li>Aisle and altar design</li>
+                                    <li>Floral arrangements (fresh/silk)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Theme Elements</h3>
+                                <ul class="feature-list">
+                                    <li>Theme-based décor (Boho, Classic, etc.)</li>
+                                    <li>Mandap or poruwa decoration</li>
+                                    <li>Entrance arches & welcome signage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image10.jpg" alt="Wedding decor">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Decor Services</h3>
+                    <p>Our design team will bring your wedding vision to life with stunning decor elements that create a cohesive and breathtaking atmosphere throughout your celebration.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Design Process</h4>
+                            <ul class="feature-list">
+                                <li>Initial concept development</li>
+                                <li>3D renderings of your venue</li>
+                                <li>Color palette and mood board creation</li>
+                                <li>Material and fabric selection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Floral Services</h4>
+                            <ul class="feature-list">
+                                <li>Seasonal flower selection</li>
+                                <li>Bridal bouquet design</li>
+                                <li>Centerpiece creation</li>
+                                <li>Ceremony floral installations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Specialty Decor</h4>
+                            <ul class="feature-list">
+                                <li>Custom lighting design</li>
+                                <li>Fabric draping and ceiling treatments</li>
+                                <li>Themed photo backdrops</li>
+                                <li>Personalized signage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="photography" class="service-section">
+                <div class="service-header">
+                    <h2>Photography & Videography</h2>
+                    <p>Capture every precious moment with our professional photography services.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Photo Services</h3>
+                                <ul class="feature-list">
+                                    <li>Pre-wedding shoot</li>
+                                    <li>Save-the-date video</li>
+                                    <li>Wedding day photography</li>
+                                    <li>Drone photography</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Video Services</h3>
+                                <ul class="feature-list">
+                                    <li>Live streaming services</li>
+                                    <li>Candid and traditional photography</li>
+                                    <li>Cinematic wedding video</li>
+                                    <li>Photo booths with props</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image11.jpg" alt="Wedding photography">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Photography Services</h3>
+                    <p>Our team of award-winning photographers and videographers will document your wedding day with artistry and professionalism, creating timeless memories you'll cherish forever.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Photography Packages</h4>
+                            <ul class="feature-list">
+                                <li>Full-day coverage (12+ hours)</li>
+                                <li>Multiple photographer teams</li>
+                                <li>Digital gallery with high-res images</li>
+                                <li>Custom photo albums</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Videography Options</h4>
+                            <ul class="feature-list">
+                                <li>Highlight reel (3-5 minutes)</li>
+                                <li>Feature film (15-30 minutes)</li>
+                                <li>Documentary-style full coverage</li>
+                                <li>Same-day edit for reception</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Specialty Services</h4>
+                            <ul class="feature-list">
+                                <li>360° virtual reality coverage</li>
+                                <li>Aerial drone cinematography</li>
+                                <li>Photo booth with custom backdrops</li>
+                                <li>Instant print stations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="entertainment" class="service-section">
+                <div class="service-header">
+                    <h2>Entertainment & Performances</h2>
+                    <p>Create unforgettable moments with world-class entertainment options.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Music & Dance</h3>
+                                <ul class="feature-list">
+                                    <li>DJ & sound systems</li>
+                                    <li>Traditional drummers/dancers</li>
+                                    <li>Live band / orchestra</li>
+                                    <li>Cultural performances</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Special Effects</h3>
+                                <ul class="feature-list">
+                                    <li>Fireworks display</li>
+                                    <li>LED shows / special light effects</li>
+                                    <li>Kids' entertainment</li>
+                                    <li>Celebrity performances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image12.jpg" alt="Wedding entertainment">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Entertainment Services</h3>
+                    <p>From traditional cultural performances to cutting-edge light shows, we'll create an unforgettable experience that keeps your guests engaged and entertained throughout your celebration.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Music Options</h4>
+                            <ul class="feature-list">
+                                <li>Custom playlist creation</li>
+                                <li>Live bands in various genres</li>
+                                <li>String quartets for ceremonies</li>
+                                <li>Cultural music specialists</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Performance Options</h4>
+                            <ul class="feature-list">
+                                <li>Traditional dance troupes</li>
+                                <li>Fire dancers and acrobats</li>
+                                <li>Cultural drummers</li>
+                                <li>Celebrity artist bookings</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Special Effects</h4>
+                            <ul class="feature-list">
+                                <li>Indoor pyrotechnics</li>
+                                <li>Projection mapping</li>
+                                <li>LED dance floors</li>
+                                <li>Confetti and bubble machines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="styling" class="service-section">
+                <div class="service-header">
+                    <h2>Bridal & Groom Styling</h2>
+                    <p>Look your absolute best on your special day with our professional styling services.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Bridal Services</h3>
+                                <ul class="feature-list">
+                                    <li>Bridal makeup & hairstyling</li>
+                                    <li>Mehendi / Henna artists</li>
+                                    <li>Saree/lehenga draping</li>
+                                    <li>Nail art & spa treatments</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Groom Services</h3>
+                                <ul class="feature-list">
+                                    <li>Groom styling & salon services</li>
+                                    <li>Bridal dress/tuxedo rental or tailoring</li>
+                                    <li>Jewelry selection support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image13.jpg" alt="Bridal styling">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Styling Services</h3>
+                    <p>Our team of beauty experts and stylists will ensure you look and feel your best on your wedding day, with personalized services tailored to your unique style and preferences.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Bridal Beauty</h4>
+                            <ul class="feature-list">
+                                <li>Makeup trials with top artists</li>
+                                <li>Hairstyling for all events</li>
+                                <li>Skincare consultations</li>
+                                <li>On-site beauty services</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Attire Services</h4>
+                            <ul class="feature-list">
+                                <li>Bridal boutique appointments</li>
+                                <li>Custom dress/tuxedo design</li>
+                                <li>Alteration coordination</li>
+                                <li>Accessory selection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Groom Services</h4>
+                            <ul class="feature-list">
+                                <li>Groom's fashion consultation</li>
+                                <li>Barber and grooming services</li>
+                                <li>Custom suit/tuxedo fittings</li>
+                                <li>Wedding day styling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="invitations" class="service-section">
+                <div class="service-header">
+                    <h2>Invitations & Stationery</h2>
+                    <p>Beautifully designed stationery to announce your special day in style.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Invitation Options</h3>
+                                <ul class="feature-list">
+                                    <li>Printed wedding invitation cards</li>
+                                    <li>Digital wedding e-invites</li>
+                                    <li>Custom wedding website with RSVP</li>
+                                    <li>Save-the-date cards</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Event Stationery</h3>
+                                <ul class="feature-list">
+                                    <li>Program booklets</li>
+                                    <li>Seating charts and name cards</li>
+                                    <li>Thank-you cards</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image14.jpg" alt="Wedding invitations">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Stationery Services</h3>
+                    <p>From traditional printed invitations to modern digital solutions, we'll help you communicate your wedding style from the very first announcement.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Invitation Design</h4>
+                            <ul class="feature-list">
+                                <li>Custom graphic design</li>
+                                <li>Premium printing techniques</li>
+                                <li>Cultural design specialists</li>
+                                <li>Calligraphy addressing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Digital Solutions</h4>
+                            <ul class="feature-list">
+                                <li>Custom wedding website</li>
+                                <li>Online RSVP management</li>
+                                <li>Digital save-the-dates</li>
+                                <li>Wedding app creation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Event Stationery</h4>
+                            <ul class="feature-list">
+                                <li>Ceremony programs</li>
+                                <li>Menu cards and place settings</li>
+                                <li>Welcome signage</li>
+                                <li>Thank-you notes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+  
+            <section id="transportation" class="service-section">
+                <div class="service-header">
+                    <h2>Transportation & Logistics</h2>
+                    <p>Seamless transportation solutions for you and your guests.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Vehicle Services</h3>
+                                <ul class="feature-list">
+                                    <li>Bridal/groom car arrangements</li>
+                                    <li>Luxury cars, limos, vintage cars</li>
+                                    <li>Guest shuttle/bus services</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Logistics</h3>
+                                <ul class="feature-list">
+                                    <li>Parking management</li>
+                                    <li>Valet service</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image15.jpg" alt="Wedding transportation">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Transportation Services</h3>
+                    <p>We'll handle all your transportation needs, ensuring smooth transitions between venues and comfortable travel for you and your guests throughout your wedding events.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Bridal Party Transport</h4>
+                            <ul class="feature-list">
+                                <li>Luxury vehicle selection</li>
+                                <li>Chauffeur services</li>
+                                <li>Decorated wedding cars</li>
+                                <li>Special arrival coordination</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Guest Transport</h4>
+                            <ul class="feature-list">
+                                <li>Shuttle bus coordination</li>
+                                <li>Hotel transfer management</li>
+                                <li>Accessible transportation</li>
+                                <li>Parking attendants</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Specialty Vehicles</h4>
+                            <ul class="feature-list">
+                                <li>Vintage car rentals</li>
+                                <li>Horse carriage arrangements</li>
+                                <li>Boat transfers</li>
+                                <li>Helicopter arrivals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ceremony" class="service-section">
+                <div class="service-header">
+                    <h2>Ceremony Planning</h2>
+                    <p>Perfectly orchestrated ceremonies that honor your traditions and preferences.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Ceremony Setup</h3>
+                                <ul class="feature-list">
+                                    <li>Religious or civil ceremony setup</li>
+                                    <li>Poruwa/marriage altar arrangements</li>
+                                    <li>Priest/celebrant booking</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Coordination</h3>
+                                <ul class="feature-list">
+                                    <li>Ceremony scripting</li>
+                                    <li>Schedule management</li>
+                                    <li>Ritual coordination</li>
+                                    <li>Music and sound during ceremony</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image16.jpg" alt="Wedding ceremony">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Ceremony Services</h3>
+                    <p>We'll work with you to create a meaningful ceremony that reflects your values, traditions, and personal style, handling all the details so you can focus on the moment.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Ceremony Design</h4>
+                            <ul class="feature-list">
+                                <li>Custom ceremony scripting</li>
+                                <li>Cultural tradition integration</li>
+                                <li>Vow writing assistance</li>
+                                <li>Reader and participant coordination</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Logistics</h4>
+                            <ul class="feature-list">
+                                <li>Officiant selection</li>
+                                <li>Marriage license assistance</li>
+                                <li>Processional planning</li>
+                                <li>Seating arrangements</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Specialty Elements</h4>
+                            <ul class="feature-list">
+                                <li>Unity ceremony options</li>
+                                <li>Cultural ritual coordination</li>
+                                <li>Live ceremony music</li>
+                                <li>Program design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="legal" class="service-section">
+                <div class="service-header">
+                    <h2>Legal & Paperwork</h2>
+                    <p>Handle all the legal formalities so you can focus on celebrating.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Documentation</h3>
+                                <ul class="feature-list">
+                                    <li>Marriage registration assistance</li>
+                                    <li>Legal document preparation</li>
+                                    <li>Government approvals (if required)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Special Services</h3>
+                                <ul class="feature-list">
+                                    <li>Interpreter services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image17.jpg" alt="Wedding legal services">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Legal Services</h3>
+                    <p>We'll guide you through all the necessary legal requirements for your marriage, ensuring everything is properly documented and filed.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Marriage Documentation</h4>
+                            <ul class="feature-list">
+                                <li>Marriage license application</li>
+                                <li>Officiant coordination</li>
+                                <li>Witness arrangements</li>
+                                <li>Certificate procurement</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>International Weddings</h4>
+                            <ul class="feature-list">
+                                <li>Destination wedding legalities</li>
+                                <li>Visa and immigration advice</li>
+                                <li>Document translation</li>
+                                <li>Cultural marriage requirements</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Name Change Assistance</h4>
+                            <ul class="feature-list">
+                                <li>Name change paperwork</li>
+                                <li>Government ID updates</li>
+                                <li>Bank and record updates</li>
+                                <li>Passport renewal guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="event-management" class="service-section">
+                <div class="service-header">
+                    <h2>Full Event Management</h2>
+                    <p>Comprehensive coordination so you can enjoy every moment stress-free.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Planning Services</h3>
+                                <ul class="feature-list">
+                                    <li>Dedicated wedding planner</li>
+                                    <li>Vendor sourcing and coordination</li>
+                                    <li>Timeline and checklist creation</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Day-of Coordination</h3>
+                                <ul class="feature-list">
+                                    <li>On-day coordination</li>
+                                    <li>Rehearsals and dry runs</li>
+                                    <li>Emergency backup planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image18.jpg" alt="Wedding event management">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Event Management</h3>
+                    <p>Our full-service planning takes care of every detail, allowing you to relax and enjoy your wedding day while we handle all the coordination and problem-solving.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Planning Process</h4>
+                            <ul class="feature-list">
+                                <li>Initial consultation</li>
+                                <li>Vendor recommendations</li>
+                                <li>Contract review</li>
+                                <li>Design development</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Month-of Coordination</h4>
+                            <ul class="feature-list">
+                                <li>Vendor confirmations</li>
+                                <li>Timeline creation</li>
+                                <li>Final walkthroughs</li>
+                                <li>Rehearsal coordination</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Day-of Execution</h4>
+                            <ul class="feature-list">
+                                <li>Vendor management</li>
+                                <li>Timeline oversight</li>
+                                <li>Guest coordination</li>
+                                <li>Emergency troubleshooting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="pre-post-events" class="service-section">
+                <div class="service-header">
+                    <h2>Pre/Post-Wedding Events</h2>
+                    <p>Celebrate every special moment surrounding your wedding day.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Pre-Wedding Events</h3>
+                                <ul class="feature-list">
+                                    <li>Engagement parties</li>
+                                    <li>Bridal showers</li>
+                                    <li>Mehendi ceremonies</li>
+                                    <li>Sangeet/music night</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Post-Wedding Events</h3>
+                                <ul class="feature-list">
+                                    <li>Bachelor/bachelorette parties</li>
+                                    <li>Homecoming celebrations</li>
+                                    <li>Post-wedding brunch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image19.jpg" alt="Wedding events">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Event Coordination</h3>
+                    <p>From your first celebration to your final farewell, we'll create memorable events that complement your wedding day.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Pre-Wedding Events</h4>
+                            <ul class="feature-list">
+                                <li>Engagement party planning</li>
+                                <li>Bridal shower coordination</li>
+                                <li>Cultural ceremony planning</li>
+                                <li>Rehearsal dinner management</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Post-Wedding Events</h4>
+                            <ul class="feature-list">
+                                <li>Farewell brunch planning</li>
+                                <li>Homecoming reception</li>
+                                <li>Gift opening party</li>
+                                <li>Anniversary surprise planning</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Specialty Parties</h4>
+                            <ul class="feature-list">
+                                <li>Bachelor/bachelorette parties</li>
+                                <li>Couple's shower</li>
+                                <li>Jack & Jill party</li>
+                                <li>Wedding film screening</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="custom-services" class="service-section">
+                <div class="service-header">
+                    <h2>Custom & Add-on Services</h2>
+                    <p>Unique touches to make your wedding truly one-of-a-kind.</p>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-text">
+                        <div class="service-features">
+                            <div class="feature-column">
+                                <h3>Personal Services</h3>
+                                <ul class="feature-list">
+                                    <li>Personal shopper for attire/jewelry</li>
+                                    <li>Gifting solutions</li>
+                                    <li>Charity arrangements</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-column">
+                                <h3>Special Add-ons</h3>
+                                <ul class="feature-list">
+                                    <li>Eco-friendly wedding setups</li>
+                                    <li>Social media management</li>
+                                    <li>App creation for guests</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-image">
+                        <img src="image20.jpg" alt="Custom wedding services">
+                    </div>
+                </div>
+
+                <div class="expanded-content">
+                    <h3>Complete Customization</h3>
+                    <p>Make your wedding uniquely yours with our special add-on services and custom creations tailored to your personality and love story.</p>
+                    
+                    <div class="expanded-features">
+                        <div class="expanded-feature">
+                            <h4>Personal Services</h4>
+                            <ul class="feature-list">
+                                <li>Wedding dress shopping assistance</li>
+                                <li>Groom's attire consultation</li>
+                                <li>Jewelry sourcing</li>
+                                <li>Gift registry management</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Special Touches</h4>
+                            <ul class="feature-list">
+                                <li>Custom wedding favors</li>
+                                <li>Personalized vows writing</li>
+                                <li>Signature scent creation</li>
+                                <li>Monogram design</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expanded-feature">
+                            <h4>Tech Services</h4>
+                            <ul class="feature-list">
+                                <li>Wedding website design</li>
+                                <li>Guest management app</li>
+                                <li>Social media coordination</li>
+                                <li>Hashtag creation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Emerald Weddings</h3>
+                    <p>Premium wedding planning services creating unforgettable celebrations since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="packages.php">Packages</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Wedding Lane, Colombo 05</p>
+                    <p><i class="fas fa-phone"></i> +94 76 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@emeraldweddings.lk</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Emerald Weddings. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
